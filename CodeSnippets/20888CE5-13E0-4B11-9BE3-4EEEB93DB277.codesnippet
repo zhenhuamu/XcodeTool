@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//-------------获取设备大小-------------//
+
+// NavigationBar 高度
+#define UI_NAVIGATION_BAR_HEIGHT    44
+#define UI_TAB_BAR_HEIGHT           49
+#define UI_STATUS_BAR_HEIGHT        20
+
+// 获取设备宽度和高度
+#define UI_SCREEN_WIDTH             ([[UIScreen mainScreen] bounds].size.weight)
+#define UI_SCREEN_HEIGHT            ([[UIScreen mainScreen] bounds].size.height)
+
+
+//-------------打印日志----------------//
+
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+
+//-------------获取系统相关-------------//
+
+// 获取application delegate
+#define  APP_DELEGATE [UIApplication sharedApplication].delegate
+
+// 获取系统版本号
+#define  SYSTEM_CURRENT_VERSION  [UIDevice currentDevice].systemVersion
+
+// 系统检查
+// 相等
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+// 大于
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+// 大于或者等于
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+// 小于
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+// 小于或者等于
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+// UserDefault快捷
+#define SetUserDefault(x,y) [[NSUserDefaults standardUserDefaults] setObject:x forKey:y];\
+[[NSUserDefaults standardUserDefaults] synchronize];
+#define GetUserDefault(x) [[NSUserDefaults standardUserDefaults] objectForKey:x]
+
+// 弱引用
+#define WS(weakSelf)    __weak __typeof(&amp;*self)weakSelf = self;
+
+// UIStoryboard
+#define SB(STORY_BOARD_NAME) [UIStoryboard storyboardWithName:STORY_BOARD_NAME bundle:nil]
+
+//-----------------颜色类----------------//
+
+#define RGB_COLOR_V(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue &amp; 0xFF0000) &gt;&gt; 16))/255.0 \
+green:((float)((rgbValue &amp; 0x00FF00) &gt;&gt; 8))/255.0 \
+blue:((float)(rgbValue &amp; 0x0000FF))/255.0 \
+alpha:1.0]
+
+#define RGB_COLOR_VA(rgbValue, alphaValue) [UIColor \
+colorWithRed:((float)((rgbValue &amp; 0xFF0000) &gt;&gt; 16))/255.0 \
+green:((float)((rgbValue &amp; 0x00FF00) &gt;&gt; 8))/255.0 \
+blue:((float)(rgbValue &amp; 0x0000FF))/255.0 \
+alpha:alphaValue]
+
+//-----------------其他-----------------//
+
+#define EMPTY_STRING        @""
+
+// 字体
+#define FONT(F)  [UIFont fontWithName:@"FZHTJW--GB1-0" size:F]
+
+// G-C-D basic
+#define GCDGLOBAL(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+
+#define GCDMAIN(block) dispatch_async(dispatch_get_main_queue(),block)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>20888CE5-13E0-4B11-9BE3-4EEEB93DB277</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Macro Utils</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
