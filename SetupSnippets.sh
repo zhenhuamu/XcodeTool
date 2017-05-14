@@ -5,7 +5,8 @@ mv ~/Library/Developer/Xcode/UserData/CodeSnippets ~/Library/Developer/Xcode/Use
 
 #建立文件软连接
 
-ln -s ./CodeSnippets ~/Library/Developer/Xcode/UserData/CodeSnippets
+SRC_HOME=`pwd`
+ln -s ${SRC_HOME}/CodeSnippets ~/Library/Developer/Xcode/UserData/CodeSnippets
 
 echo "done"
 
