@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>AndyMu_Clang Diagnostic Push</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//废弃的方法
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+#pragma clang diagnostic pop
+        
+//不兼容指针类型
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wincompatible-pointer-types"
+        
+#pragma clang diagnostic pop
+        
+//循环引用
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-retain-cycles"
+
+#pragma clang diagnostic pop
+        
+//未使用变量
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-variable"
+        
+#pragma clang diagnostic pop
+        
+//未使用default
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wcovered-switch-default"
+
+#pragma clang diagnostic pop
+        
+        
+//未实现方法
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
+
+#pragma clang diagnostic pop</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>435BC1D0-F1B8-48CE-B186-E6EC8DC58E0F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Clang Diagnostic Push</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
