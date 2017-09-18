@@ -6,7 +6,7 @@
 	<string>AndyMu_Hide Keyboard</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

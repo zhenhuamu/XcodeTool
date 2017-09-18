@@ -6,7 +6,7 @@
 	<string>AndyMu_MacroUtils</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>//-------------获取设备大小-------------//
